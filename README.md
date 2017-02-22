@@ -1,6 +1,6 @@
 # The Namegame: iOS
 
-Leading scientists have proven, via science, that learning your coworkers names while starting a new job is useful. Your test project is to make it happen! The api is located at [http://api.namegame.willowtreemobile.com/](http://api.namegame.willowtreemobile.com/).
+Leading scientists have proven, via science, that learning your coworkers names while starting a new job is useful. Your test project is to make it happen! The api is located at [https://willowtreeapps.com/api/v1.0/profiles/](https://willowtreeapps.com/api/v1.0/profiles/).
 
 
 ## Your mission
@@ -13,6 +13,7 @@ Present the user with six faces and ask them to identify the listed name. To spr
     * Mat(t) Mode. Roughly 90% of our co-workers are named Mat(t), so add a challenge mode where you only present the users with A Mat(t).
     * Reverse mode: Show one face with 5 names. Ask the user to identify the correct name.
 4. Hint mode. As people wait, faces disappear until only the correct one is left.
+5. Team mode. The api returns people who used to work here too. Current team members have titles and former team members don't.
 5. Insert your own idea here!
 
 
