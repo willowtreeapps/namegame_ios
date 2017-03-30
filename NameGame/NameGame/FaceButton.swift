@@ -27,7 +27,7 @@ open class FaceButton: UIButton {
     func setup() {
         setTitleColor(.white, for: .normal)
         titleLabel?.alpha = 0.0
-        titleLabel?.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        titleLabel?.backgroundColor = UIColor.black.withAlphaComponent(0.24)
         titleLabel?.numberOfLines = 2
         tintView.alpha = 0.0
         tintView.translatesAutoresizingMaskIntoConstraints = false
@@ -57,7 +57,7 @@ open class FaceButton: UIButton {
         })
     }
     
-    /// No tint
+    /// No tint.
     func transitionToNone() {
         tintView.backgroundColor = UIColor.white.withAlphaComponent(0.2)
         self.tintView.alpha = 0.0
@@ -65,20 +65,29 @@ open class FaceButton: UIButton {
     }
 
     
-    /// Reveal the name
+    /// Reveal the name.
     func revealName() {
         self.titleLabel?.alpha = 1.0
     }
     
     /// Show the user's face on the button.
     func showFace(image: UIImage, profileAt index: Int) {
-        //self.imageView?.contentMode = .scaleAspectFit
-    
-        setBackgroundImage(image, for: .normal)
-    
-        (self.subviews[0] as! UIImageView).contentMode = .scaleAspectFit
-    
+
         id = index
+
+        setBackgroundImage(image, for: .normal)
+        // TODO: dont like this solution
+        (self.subviews[0] as! UIImageView).contentMode = .scaleAspectFit
+
+        /*
+         Setting button.image will akkow setting contentmode on the imageView
+         but will hide the button title
+
+         setImage(image, for: .normal)
+         self.imageView?.contentMode = .scaleAspectFit
+         
+         */
+
     }
     
     

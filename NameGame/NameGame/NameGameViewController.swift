@@ -55,7 +55,6 @@ class NameGameViewController: UIViewController {
     
     /// Play a new round of same game.
     func playRound() {
-
         resetButtons()
         activity.startAnimating()
         nameGame.playRound()
@@ -124,7 +123,6 @@ class NameGameViewController: UIViewController {
             button.transitionToFalse()
         }
     }
-    
     
     /// Reveal the result of the choice for button.
     func revealAllNames() {

@@ -29,7 +29,7 @@ class NameGame {
 
     weak var delegate: NameGameDelegate?
 
-    /// Number of people per round
+    /// Number of people per round.
     let numberPeople = 6
     
     /// All game data from server.
@@ -47,7 +47,7 @@ class NameGame {
     /// Current round.
     var round = 0
 
-    /// Game filter to use for new games
+    /// Game filter to use for new games.
     var gameFilter = FilterGameData.current
 
     // Load JSON data from API
@@ -94,11 +94,9 @@ class NameGame {
     
     /// Process the results retrieving profiles.
     private func processResults(_ results:[String:Any]) {
-        
         if let items = results["items"] as? [[String:Any]] {
             allGameData = items
         }
-        //analyzeGameData()
     }
     
  
@@ -183,24 +181,13 @@ class NameGame {
             }
         }
         
-        //print("\(selectedItems)")
-        
         inPlayGameItems = selectedItems
         
         // Pick solution item
         let r = Int(arc4random_uniform(UInt32(selectedItems.count - 1)))
         
         inPlaySolutionItem = inPlayGameItems[r]
-        //print("\(inPlaySolutionItem)")
     }
-    
-        
-//        // testdata for all
-//        //        [21, 25, 71, 47, 96, 76]
-//        //        96
-//        inPlayGameItems = [21, 25, 71, 47, 96, 76]
-//        inPlaySolutionItem = 96
-
     
     
     /// Returns whether choice is correct
