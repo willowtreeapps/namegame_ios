@@ -45,9 +45,23 @@ class NameGameViewController: UIViewController {
     /// Commence play.
     func playGame() {
         
+        hideButtons()
+        
+        nameGame.newGame()
+        
+        playRound()
+
+    }
+    
+    /// Play a new round of same game.
+    func playRound() {
+
+        hideButtons()
+
+        nameGame.playRound()
+        
         questionLabel.text = "Who is " + nameGame.getSolutionProfileName() + "?"
         
-        hideButtons()
         
         var countImagesRetrieved = 0
         let count = nameGame.numberPeople
@@ -86,17 +100,25 @@ class NameGameViewController: UIViewController {
     @IBAction func faceTapped(_ button: FaceButton) {
         
         button.setTitle(nameGame.getProfileName(at: button.id), for: .normal)
+
+        revealChoiceResult(button)
+    }
+
+    /// Reveal the result of the choice for button.
+    func revealChoiceResult(_ button: FaceButton) {
         
-        if button.id == nameGame.inPlaySolutionItem {
+        if nameGame.choiceResult(choiceIndex: button.id) {
             print("YES")
             button.transitionToTrue()
-            
         } else {
             print("NO")
             button.transitionToFalse()
         }
     }
 
+    
+    // MARK: Layout
+    
     func configureSubviews(_ orientation: UIDeviceOrientation) {
         if orientation.isLandscape {
             outerStackView.axis = .vertical

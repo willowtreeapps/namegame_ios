@@ -47,6 +47,7 @@ class NameGame {
     /// Current round.
     var round = 0
 
+    /// Game filter to use for new games
     var gameFilter = FilterGameData.all
 
     // Load JSON data from API
@@ -101,7 +102,7 @@ class NameGame {
     }
     
     
-
+/*
     /// Establishes active game data and picks current play items
     private func analyzeGameData() {
         
@@ -111,16 +112,11 @@ class NameGame {
         //filterGameData(filter: .all)
         //pickItems()
     }
+ */
+ 
     
-    /// Play a round
-    func playRound() {
-        
-        round += 1
-        
-        //filterGameData(filter: .custom("Mat"))
+    func newGame() {
         filterGameData(filter: gameFilter)
-        pickItems()
-        
     }
     
     /// Filters the actve gameData.
@@ -154,8 +150,21 @@ class NameGame {
 
     }
     
+    
+    /// Play a round
+    func playRound() {
+        
+        round += 1
+        
+        //filterGameData(filter: .custom("Mat"))
+        //filterGameData(filter: gameFilter)
+        pickItems()
+        
+    }
+
+    
     /// Pick gamePlay items.
-    func pickItems() {
+    private func pickItems() {
         
         var alreadySelected = IndexSet()
         var selectedItems: [Int] = []
@@ -193,6 +202,11 @@ class NameGame {
         inPlaySolutionItem = 96
     }
     
+    
+    /// Returns whether choice is correct
+    func choiceResult(choiceIndex: Int) -> Bool {
+        return choiceIndex == inPlaySolutionItem
+    }
 
     /// Returns the solution profile name.
     func getSolutionProfileName() -> String {
