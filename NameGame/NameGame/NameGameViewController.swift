@@ -27,15 +27,20 @@ class NameGameViewController: UIViewController {
         
         nameGame.delegate = self
         
+        prepareGamePlay()
+  
+    }
+
+    // MARK: GamePlay
+    
+    
+    func prepareGamePlay() {
         DispatchQueue.global().async {
             self.nameGame.loadGameData {
                 self.playGame()
             }
         }
-
     }
-
-    // MARK: GamePlay
     
     /// Commence play.
     func playGame() {

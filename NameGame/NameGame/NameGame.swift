@@ -46,6 +46,7 @@ class NameGame {
         
         var dataFromResponse: Data? = nil
         
+        // try disk file first
         do {
             let data = try Data(contentsOf: profilesURL)
             dataFromResponse = data
@@ -57,6 +58,7 @@ class NameGame {
         
         do {
             if dataFromResponse == nil {
+                // No disk file retrieve from server
                 let data = try Data(contentsOf: URL(string:"https://willowtreeapps.com/api/v1.0/profiles/")!)
                 dataFromResponse = data
                 do {
@@ -68,7 +70,6 @@ class NameGame {
             }
             
             let json = try JSONSerialization.jsonObject(with: dataFromResponse!, options: []) as! [String:Any]
-            //print(json)
             
             processResults(json)
             
@@ -78,10 +79,9 @@ class NameGame {
         
         completion()
 
-
     }
     
-    
+    /// Process the results retrieving profiles
     private func processResults(_ results:[String:Any]) {
         
         if let items = results["items"] as? [[String:Any]] {
@@ -129,9 +129,6 @@ class NameGame {
                 }
                 return false
             }
-
-        default:
-            gameData = allGameData
         }
         
         print("gameData Count \(gameData.count)")
@@ -204,33 +201,41 @@ class NameGame {
         }
         
         return result
-        
     }
     
-    
-    func getImage(at index:Int, completion: @escaping (UIImage) -> Void) {
+
+    /// Obtain the image url for profile at index
+    func getImageURL(at index:Int) -> URL? {
         
         let profile = gameData[index]
         
         if let headShot = profile["headshot"] as? [String:Any],
             let headShotURLString = headShot["url"] as? String {
-            
-            
-            if let imageURL = URL(string:"http:" + headShotURLString) {
-                print(headShotURLString)
-                DispatchQueue.global().async {
-                    if let imageData = try? Data(contentsOf: imageURL),
-                        let image = UIImage(data: imageData) {
-                        DispatchQueue.main.async {
-                            completion(image)
-                        }
+            print(headShotURLString)
+
+            return URL(string:"http:" + headShotURLString)
+        }
+        
+        // print(profile)
+
+        return nil
+    }
+
+    
+    /// Obtain the image for profile at index
+    func getImage(at index:Int, completion: @escaping (UIImage) -> Void) {
+        
+        if let imageURL = getImageURL(at: index) {
+            DispatchQueue.global().async {
+                if let imageData = try? Data(contentsOf: imageURL),
+                    let image = UIImage(data: imageData) {
+                    DispatchQueue.main.async {
+                        completion(image)
                     }
-                } // dispatch
-                
-            }
+                }
+            } // dispatch
             
         }
-        print(profile)
     }
 
 }
