@@ -117,6 +117,7 @@ class NameGame {
     
     func newGame() {
         filterGameData(filter: gameFilter)
+        round = 0
     }
     
     /// Filters the actve gameData.
@@ -197,9 +198,11 @@ class NameGame {
         // testdata
         //        [21, 25, 71, 47, 96, 76]
         //        96
-        
+
+        /*
         inPlayGameItems = [21, 25, 71, 47, 96, 76]
         inPlaySolutionItem = 96
+ */
     }
     
     

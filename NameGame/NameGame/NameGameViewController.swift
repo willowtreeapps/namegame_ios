@@ -67,6 +67,7 @@ class NameGameViewController: UIViewController {
         let count = nameGame.numberPeople
         
         for (index, profileIndex) in nameGame.inPlayGameItems.enumerated() {
+            
             nameGame.getImage(at: profileIndex) { (image) in
                 
                 self.imageButtons[index].showFace(image: image, profileAt: profileIndex)
@@ -116,6 +117,37 @@ class NameGameViewController: UIViewController {
         }
     }
 
+    @IBAction func actionButtonTapped(_ sender: UIBarButtonItem) {
+        
+        let alert = UIAlertController(title: "Game Play Options", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "All", style: .default) { action in
+            self.nameGame.gameFilter = .all
+            self.playGame()
+        })
+        
+        alert.addAction(UIAlertAction(title: "Current Employees", style: .default) { action in
+            self.nameGame.gameFilter = .current
+            self.playGame()
+        })
+        alert.addAction(UIAlertAction(title: "Former Employees", style: .default) { action in
+            self.nameGame.gameFilter = .former
+            self.playGame()
+        })
+        
+        alert.addAction(UIAlertAction(title: "Matthew Employees", style: .default) { action in
+            self.nameGame.gameFilter = .custom("Mat")
+            self.playGame()
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { action in
+        })
+
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func playButtonTapped(_ sender: UIBarButtonItem) {
+        self.playRound()
+    }
     
     // MARK: Layout
     

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5mg-U9-7PF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,23 +24,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Who is ...?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YNy-dp-Uoo">
-                                <rect key="frame" x="16" y="35" width="343" height="38.5"/>
+                                <rect key="frame" x="16" y="79" width="343" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vIP-zJ-c7A" userLabel="Outer Stack">
-                                <rect key="frame" x="16" y="84" width="343" height="573"/>
+                                <rect key="frame" x="16" y="128" width="343" height="529"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EA9-A5-9wD" userLabel="Inner Stack View 1">
-                                        <rect key="frame" x="0.0" y="25.5" width="164" height="522"/>
+                                        <rect key="frame" x="0.0" y="3.5" width="164" height="522"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGv-0C-ewu" customClass="FaceButton" customModule="NameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="164"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FGv-0C-ewu" secondAttribute="height" multiplier="1:1" id="aBx-Yy-25R"/>
                                                 </constraints>
-                                                <state key="normal" title="Person 1" backgroundImage="E0E17DEE-009B-479C-8032-ED520B514C9D"/>
+                                                <state key="normal" title="Person 1" backgroundImage="8B465AA9-7098-4002-A70A-5F285C06B5F2"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0X-ga-X94"/>
                                                 </connections>
@@ -51,7 +51,7 @@
                                                     <constraint firstAttribute="width" secondItem="qlO-si-bP2" secondAttribute="height" multiplier="1:1" id="aiT-Qv-AU6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 2" backgroundImage="E0E17DEE-009B-479C-8032-ED520B514C9D"/>
+                                                <state key="normal" title="Person 2" backgroundImage="8B465AA9-7098-4002-A70A-5F285C06B5F2"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCs-fq-4gM"/>
                                                 </connections>
@@ -62,7 +62,7 @@
                                                     <constraint firstAttribute="width" secondItem="m9V-c5-o1r" secondAttribute="height" multiplier="1:1" id="ZgB-UY-UAw"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 3" backgroundImage="E0E17DEE-009B-479C-8032-ED520B514C9D"/>
+                                                <state key="normal" title="Person 3" backgroundImage="8B465AA9-7098-4002-A70A-5F285C06B5F2"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rxn-jl-MoD"/>
                                                 </connections>
@@ -71,7 +71,7 @@
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9jZ-07-xma" userLabel="Inner Stack View 2">
-                                        <rect key="frame" x="179" y="25.5" width="164" height="522"/>
+                                        <rect key="frame" x="179" y="3.5" width="164" height="522"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKD-LA-aOV" customClass="FaceButton" customModule="NameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="164"/>
@@ -79,7 +79,7 @@
                                                     <constraint firstAttribute="width" secondItem="wKD-LA-aOV" secondAttribute="height" multiplier="1:1" id="jTy-xr-yVR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 4" backgroundImage="E0E17DEE-009B-479C-8032-ED520B514C9D"/>
+                                                <state key="normal" title="Person 4" backgroundImage="8B465AA9-7098-4002-A70A-5F285C06B5F2"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qJ2-f6-JBo"/>
                                                 </connections>
@@ -90,7 +90,7 @@
                                                     <constraint firstAttribute="width" secondItem="sT1-JL-4jJ" secondAttribute="height" multiplier="1:1" id="a4I-eK-8ky"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 5" backgroundImage="E0E17DEE-009B-479C-8032-ED520B514C9D"/>
+                                                <state key="normal" title="Person 5" backgroundImage="8B465AA9-7098-4002-A70A-5F285C06B5F2"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vcn-hA-MTq"/>
                                                 </connections>
@@ -101,7 +101,7 @@
                                                     <constraint firstAttribute="width" secondItem="ljo-Aa-9vE" secondAttribute="height" multiplier="1:1" id="Ndx-b5-Keu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 6" backgroundImage="E0E17DEE-009B-479C-8032-ED520B514C9D"/>
+                                                <state key="normal" title="Person 6" backgroundImage="8B465AA9-7098-4002-A70A-5F285C06B5F2"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tzX-ZE-DFh"/>
                                                 </connections>
@@ -125,6 +125,18 @@
                             <constraint firstAttribute="trailingMargin" secondItem="YNy-dp-Uoo" secondAttribute="trailing" id="vR4-U7-Z3L"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Jjx-2W-8P7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="play" id="XRN-9B-yph">
+                            <connections>
+                                <action selector="playButtonTapped:" destination="BYZ-38-t0r" id="OPH-mm-Y03"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="lZE-x5-Pz2">
+                            <connections>
+                                <action selector="actionButtonTapped:" destination="BYZ-38-t0r" id="iIx-5d-6ld"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="innerStackView1" destination="EA9-A5-9wD" id="yjt-2t-CcL"/>
                         <outlet property="innerStackView2" destination="9jZ-07-xma" id="qPn-q5-7bh"/>
@@ -140,11 +152,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303" y="470"/>
+            <point key="canvasLocation" x="1240.8" y="469.1154422788606"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TMk-4f-wf1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5mg-U9-7PF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1OO-CC-mMP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MRT-m1-kuG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yz0-Ad-XOX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301.60000000000002" y="469.1154422788606"/>
         </scene>
     </scenes>
     <resources>
-        <image name="E0E17DEE-009B-479C-8032-ED520B514C9D" width="170" height="170">
+        <image name="8B465AA9-7098-4002-A70A-5F285C06B5F2" width="170" height="170">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
