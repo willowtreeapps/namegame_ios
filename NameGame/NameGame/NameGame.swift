@@ -247,7 +247,7 @@ class NameGame {
         
         if let headShot = profile["headshot"] as? [String:Any],
             let headShotURLString = headShot["url"] as? String {
-            print(headShotURLString)
+//            print(headShotURLString)
 
             return URL(string:"http:" + headShotURLString)
         }
@@ -262,9 +262,13 @@ class NameGame {
     func getImage(at index:Int, completion: @escaping (UIImage) -> Void) {
         
         if let imageURL = getImageURL(at: index) {
+            print("retrieving \(imageURL.lastPathComponent)")
             DispatchQueue.global().async {
                 if let imageData = try? Data(contentsOf: imageURL),
                     let image = UIImage(data: imageData) {
+                    
+                    print("retrieved \(imageURL.lastPathComponent)")
+
                     completion(image)
                     /*
                     DispatchQueue.main.async {
