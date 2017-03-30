@@ -61,17 +61,23 @@ open class FaceButton: UIButton {
     
     /// No tint
     func transitionToNone() {
-        tintView.backgroundColor = UIColor.red.withAlphaComponent(0.2)
+        tintView.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+        
+        self.tintView.alpha = 0.0
+        self.titleLabel?.alpha = 0.0
+
+    /*
         UIView.animate(withDuration: 0.5, animations: {
             self.tintView.alpha = 0.0
             self.titleLabel?.alpha = 0.0
             
         }) { (fini) in
         }
+ */
     }
 
-    // TODO: Show the user's face on the button.
     
+    /// Show the user's face on the button.
     func showFace(image: UIImage, profileAt index: Int) {
         //self.imageView?.contentMode = .scaleAspectFit
     
