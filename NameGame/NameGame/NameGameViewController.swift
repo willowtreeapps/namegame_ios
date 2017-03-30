@@ -33,7 +33,6 @@ class NameGameViewController: UIViewController {
 
     // MARK: GamePlay
     
-    
     func prepareGamePlay() {
         DispatchQueue.global().async {
             self.nameGame.loadGameData {
@@ -54,7 +53,6 @@ class NameGameViewController: UIViewController {
 
         resetButtons()
         activity.startAnimating()
-
         nameGame.playRound()
         
         questionLabel.text = "Who is " + nameGame.getSolutionProfileName() + "?"
@@ -83,15 +81,6 @@ class NameGameViewController: UIViewController {
             }
         }
     }
-
-    /*
-    /// Hides all of the buttons.
-    private func hideButtons() {
-        for button in imageButtons {
-            button.isHidden = true
-        }
-    }
- */
 
     /// UnHide all of the buttons.
     private func revealButtons() {

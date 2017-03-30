@@ -92,7 +92,7 @@ class NameGame {
 
     }
     
-    /// Process the results retrieving profiles
+    /// Process the results retrieving profiles.
     private func processResults(_ results:[String:Any]) {
         
         if let items = results["items"] as? [[String:Any]] {
@@ -101,20 +101,8 @@ class NameGame {
         //analyzeGameData()
     }
     
-    
-/*
-    /// Establishes active game data and picks current play items
-    private func analyzeGameData() {
-        
-        print("Count \(gameData.count)")
-        
-        //filterGameData(filter: .custom("Mat"))
-        //filterGameData(filter: .all)
-        //pickItems()
-    }
- */
  
-    
+    /// Starts a new game.
     func newGame() {
         filterGameData(filter: gameFilter)
         round = 0
@@ -151,18 +139,11 @@ class NameGame {
 
     }
     
-    
     /// Play a round
     func playRound() {
-        
         round += 1
-        
-        //filterGameData(filter: .custom("Mat"))
-        //filterGameData(filter: gameFilter)
         pickItems()
-        
     }
-
     
     /// Pick gamePlay items.
     private func pickItems() {
@@ -175,9 +156,9 @@ class NameGame {
         // Pick candidates
         while (selectedItems.count < numberPeople) {
             let r = Int(arc4random_uniform(UInt32(count - 1)))
-            
+
+            // check for duplicates
             if alreadySelected.contains(r) {
-                print("duplicate")
                 continue
             }
             alreadySelected.insert(r)
@@ -193,17 +174,15 @@ class NameGame {
         
         inPlaySolutionItem = inPlayGameItems[r]
         print("\(inPlaySolutionItem)")
-        
-        
-        // testdata
-        //        [21, 25, 71, 47, 96, 76]
-        //        96
-
-        /*
-        inPlayGameItems = [21, 25, 71, 47, 96, 76]
-        inPlaySolutionItem = 96
- */
     }
+    
+        
+//        // testdata for all
+//        //        [21, 25, 71, 47, 96, 76]
+//        //        96
+//        inPlayGameItems = [21, 25, 71, 47, 96, 76]
+//        inPlaySolutionItem = 96
+
     
     
     /// Returns whether choice is correct
@@ -247,18 +226,14 @@ class NameGame {
         
         if let headShot = profile["headshot"] as? [String:Any],
             let headShotURLString = headShot["url"] as? String {
-//            print(headShotURLString)
-
             return URL(string:"http:" + headShotURLString)
         }
-        
-        // print(profile)
 
         return nil
     }
 
     
-    /// Obtain the image for profile at index
+    /// Obtain the image for profile at index.
     func getImage(at index:Int, completion: @escaping (UIImage) -> Void) {
         
         if let imageURL = getImageURL(at: index) {
@@ -268,53 +243,17 @@ class NameGame {
                     let image = UIImage(data: imageData) {
                     
                     print("retrieved \(imageURL.lastPathComponent)")
-
                     completion(image)
-                    /*
-                    DispatchQueue.main.async {
-                        completion(image)
-                    }
- */
+//                    DispatchQueue.main.async {
+//                        completion(image)
+//                    }
+
                 }
-            } // dispatch
-            
+            }
         }
     }
 
 }
 
-
-/*
- firstName = Joel;
- headshot =             {
- alt = "headshot joel garrett";
- height = 340;
- id = 4Mv2CONANym46UwuuCIgK;
- mimeType = "image/jpeg";
- type = image;
- url = "//images.contentful.com/3cttzl4i3k1h/4Mv2CONANym46UwuuCIgK/cbeb43c93a843a43c07b1de9954795e2/headshot_joel_garrett.jpg";
- width = 340;
- };
- id = 4NCJTL13UkK0qEIAAcg4IQ;
- jobTitle = "Senior Software Engineer";
- lastName = Garrett;
- slug = "joel-garrett";
- socialLinks =             (
- );
- type = people;
- },
- {
- firstName = Gregg;
- headshot =             {
- alt = "headshot gregg carrier";
- height = 726;
- id = 2CQgvecTcoSUqy6o4qcCwi;
- mimeType = "image/jpeg";
- type = image;
- url = "//images.contentful.com/3cttzl4i3k1h/2CQgvecTcoSUqy6o4qcCwi/c4a0610db37e6f34b8968275fb32a1b9/IMG_4495-348.jpg";
- width = 726;
- };
- 
- */
 
 
