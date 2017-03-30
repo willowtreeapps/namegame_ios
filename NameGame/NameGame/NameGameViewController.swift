@@ -69,7 +69,6 @@ class NameGameViewController: UIViewController {
                 }
 
                 countImagesRetrieved += 1
-                //print("\(countImagesRetrieved) \(count)")
                 if countImagesRetrieved < count {
                     // waiting
                 } else {
