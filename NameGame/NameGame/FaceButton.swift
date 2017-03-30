@@ -47,7 +47,7 @@ open class FaceButton: UIButton {
     /// A negative match.
     func transitionToFalse() {
         tintView.backgroundColor = UIColor.red.withAlphaComponent(0.09)
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.25, animations: {
             self.tintView.alpha = 1.0
             self.titleLabel?.alpha = 1.0
         })
@@ -56,7 +56,7 @@ open class FaceButton: UIButton {
     /// A positive match.
     func transitionToTrue() {
         tintView.backgroundColor = UIColor.green.withAlphaComponent(0.09)
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.25, animations: {
             self.tintView.alpha = 1.0
             self.titleLabel?.alpha = 1.0
         })
