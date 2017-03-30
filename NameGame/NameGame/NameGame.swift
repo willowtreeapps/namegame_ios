@@ -138,6 +138,20 @@ class NameGame {
         print("gameData Count \(gameData.count)")
 
     }
+
+    /// Returns game title from filter
+    func gameTitle() -> String {
+        switch gameFilter {
+        case .all:
+            return "All"
+        case .former:
+            return "Former"
+        case .current:
+            return "Current"
+        case .custom (let filterString):
+            return "Custom " + filterString
+        }
+    }
     
     /// Play a round
     func playRound() {

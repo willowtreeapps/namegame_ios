@@ -46,6 +46,7 @@ class NameGameViewController: UIViewController {
     
     /// Commence play.
     func playGame() {
+        title = nameGame.gameTitle()
         resetButtons()
         nameGame.newGame()
         playRound()
