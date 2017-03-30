@@ -265,9 +265,12 @@ class NameGame {
             DispatchQueue.global().async {
                 if let imageData = try? Data(contentsOf: imageURL),
                     let image = UIImage(data: imageData) {
+                    completion(image)
+                    /*
                     DispatchQueue.main.async {
                         completion(image)
                     }
+ */
                 }
             } // dispatch
             

@@ -51,13 +51,12 @@ class NameGameViewController: UIViewController {
         nameGame.newGame()
         
         playRound()
-
     }
     
     /// Play a new round of same game.
     func playRound() {
 
-        hideButtons()
+        resetButtons()
 
         nameGame.playRound()
         
@@ -66,21 +65,25 @@ class NameGameViewController: UIViewController {
         activity.startAnimating()
         
         var countImagesRetrieved = 0
-        let count = nameGame.numberPeople
+        let count = nameGame.inPlayGameItems.count
         
         for (index, profileIndex) in nameGame.inPlayGameItems.enumerated() {
             
             nameGame.getImage(at: profileIndex) { (image) in
-                
-                self.imageButtons[index].showFace(image: image, profileAt: profileIndex)
+
+                DispatchQueue.main.async {
+                    self.imageButtons[index].showFace(image: image, profileAt: profileIndex)
+                }
 
                 countImagesRetrieved += 1
                 //print("\(countImagesRetrieved) \(count)")
                 if countImagesRetrieved < count {
                     // waiting
                 } else {
-                    self.revealButtons()
-                    self.activity.stopAnimating()
+                    DispatchQueue.main.async {
+                        self.revealButtons()
+                        self.activity.stopAnimating()
+                    }
                 }
             }
         }
@@ -98,6 +101,14 @@ class NameGameViewController: UIViewController {
             button.isHidden = false
         }
     }
+    
+    private func resetButtons() {
+        for button in imageButtons {
+            button.isHidden = true
+            button.transitionToNone()
+        }
+    }
+
     
     // MARK: Actions
 
