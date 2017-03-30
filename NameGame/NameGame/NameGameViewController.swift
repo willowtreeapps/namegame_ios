@@ -111,15 +111,28 @@ class NameGameViewController: UIViewController {
 
     /// Reveal the result of the choice for button.
     func revealChoiceResult(_ button: FaceButton) {
-        
+
         if nameGame.choiceResult(choiceIndex: button.id) {
             print("YES")
             button.transitionToTrue()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                // your code here
+                self.revealAllNames()
+            }
         } else {
             print("NO")
             button.transitionToFalse()
         }
     }
+    
+    
+    /// Reveal the result of the choice for button.
+    func revealAllNames() {
+        for button in imageButtons {
+            button.revealName()
+        }
+    }
+
 
     @IBAction func actionButtonTapped(_ sender: UIBarButtonItem) {
         

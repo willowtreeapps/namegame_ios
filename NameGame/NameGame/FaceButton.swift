@@ -77,6 +77,11 @@ open class FaceButton: UIButton {
     }
 
     
+    /// Reveal the name
+    func revealName() {
+        self.titleLabel?.alpha = 1.0
+    }
+    
     /// Show the user's face on the button.
     func showFace(image: UIImage, profileAt index: Int) {
         //self.imageView?.contentMode = .scaleAspectFit
