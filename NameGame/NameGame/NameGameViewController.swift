@@ -49,6 +49,7 @@ class NameGameViewController: UIViewController {
         title = nameGame.gameTitle()
         resetButtons()
         nameGame.newGame()
+        playButton.isEnabled = false
         playRound()
     }
     
