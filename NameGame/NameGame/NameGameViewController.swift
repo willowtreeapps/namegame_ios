@@ -10,6 +10,7 @@ import UIKit
 
 class NameGameViewController: UIViewController {
 
+    @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var outerStackView: UIStackView!
     @IBOutlet weak var innerStackView1: UIStackView!
     @IBOutlet weak var innerStackView2: UIStackView!
@@ -62,6 +63,7 @@ class NameGameViewController: UIViewController {
         
         questionLabel.text = "Who is " + nameGame.getSolutionProfileName() + "?"
         
+        activity.startAnimating()
         
         var countImagesRetrieved = 0
         let count = nameGame.numberPeople
@@ -78,6 +80,7 @@ class NameGameViewController: UIViewController {
                     // waiting
                 } else {
                     self.revealButtons()
+                    self.activity.stopAnimating()
                 }
             }
         }
