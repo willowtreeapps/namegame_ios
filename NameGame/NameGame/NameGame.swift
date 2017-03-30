@@ -48,7 +48,7 @@ class NameGame {
     var round = 0
 
     /// Game filter to use for new games
-    var gameFilter = FilterGameData.all
+    var gameFilter = FilterGameData.current
 
     // Load JSON data from API
     func loadGameData(completion: @escaping () -> Void) {
