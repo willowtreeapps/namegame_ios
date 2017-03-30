@@ -140,7 +140,7 @@ class NameGame {
 
     }
 
-    /// Returns game title from filter
+    /// Returns game title from filter.
     func gameTitle() -> String {
         switch gameFilter {
         case .all:
@@ -154,7 +154,7 @@ class NameGame {
         }
     }
     
-    /// Setup new round of current game
+    /// Setup new round of current game.
     func newRound() {
         round += 1
         pickItems()
