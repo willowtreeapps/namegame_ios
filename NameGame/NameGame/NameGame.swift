@@ -169,7 +169,7 @@ class NameGame {
             }
         }
         
-        print("\(selectedItems)")
+        //print("\(selectedItems)")
         
         inPlayGameItems = selectedItems
         
@@ -177,7 +177,7 @@ class NameGame {
         let r = Int(arc4random_uniform(UInt32(selectedItems.count - 1)))
         
         inPlaySolutionItem = inPlayGameItems[r]
-        print("\(inPlaySolutionItem)")
+        //print("\(inPlaySolutionItem)")
     }
     
         
@@ -241,12 +241,10 @@ class NameGame {
     func getImage(at index:Int, completion: @escaping (UIImage) -> Void) {
         
         if let imageURL = getImageURL(at: index) {
-            print("retrieving \(imageURL.lastPathComponent)")
+            
             DispatchQueue.global().async {
                 if let imageData = try? Data(contentsOf: imageURL),
                     let image = UIImage(data: imageData) {
-                    
-                    print("retrieved \(imageURL.lastPathComponent)")
                     completion(image)
 //                    DispatchQueue.main.async {
 //                        completion(image)

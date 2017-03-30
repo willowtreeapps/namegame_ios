@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5mg-U9-7PF">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5mg-U9-7PF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -35,34 +35,47 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EA9-A5-9wD" userLabel="Inner Stack View 1">
                                         <rect key="frame" x="0.0" y="3.5" width="164" height="522"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGv-0C-ewu" customClass="FaceButton" customModule="NameGame" customModuleProvider="target">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGv-0C-ewu" customClass="FaceButton" customModule="NameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="164"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.21101668074324326" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FGv-0C-ewu" secondAttribute="height" multiplier="1:1" id="aBx-Yy-25R"/>
                                                 </constraints>
-                                                <state key="normal" title="Person 1" backgroundImage="394EFA60-50A8-4BEB-B243-20BB0A05022E"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <size key="titleShadowOffset" width="0.5" height="0.5"/>
+                                                <state key="normal" title="Person 1" backgroundImage="15F7BA9C-2835-4C2D-B97D-661FF8E7D986">
+                                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0X-ga-X94"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlO-si-bP2" customClass="FaceButton" customModule="NameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="179" width="164" height="164"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.21101668074324326" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qlO-si-bP2" secondAttribute="height" multiplier="1:1" id="aiT-Qv-AU6"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 2" backgroundImage="394EFA60-50A8-4BEB-B243-20BB0A05022E"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <size key="titleShadowOffset" width="0.5" height="0.5"/>
+                                                <state key="normal" title="Person 2" backgroundImage="15F7BA9C-2835-4C2D-B97D-661FF8E7D986">
+                                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCs-fq-4gM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9V-c5-o1r" customClass="FaceButton" customModule="NameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="358" width="164" height="164"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.21101668074324326" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="m9V-c5-o1r" secondAttribute="height" multiplier="1:1" id="ZgB-UY-UAw"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 3" backgroundImage="394EFA60-50A8-4BEB-B243-20BB0A05022E"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <size key="titleShadowOffset" width="0.5" height="0.5"/>
+                                                <state key="normal" title="Person 3" backgroundImage="15F7BA9C-2835-4C2D-B97D-661FF8E7D986">
+                                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rxn-jl-MoD"/>
                                                 </connections>
@@ -75,33 +88,45 @@
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKD-LA-aOV" customClass="FaceButton" customModule="NameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="164"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.21101668074324326" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wKD-LA-aOV" secondAttribute="height" multiplier="1:1" id="jTy-xr-yVR"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 4" backgroundImage="394EFA60-50A8-4BEB-B243-20BB0A05022E"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <size key="titleShadowOffset" width="0.5" height="0.5"/>
+                                                <state key="normal" title="Person 4" backgroundImage="15F7BA9C-2835-4C2D-B97D-661FF8E7D986">
+                                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qJ2-f6-JBo"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sT1-JL-4jJ" customClass="FaceButton" customModule="NameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="179" width="164" height="164"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.21101668074324326" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="sT1-JL-4jJ" secondAttribute="height" multiplier="1:1" id="a4I-eK-8ky"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 5" backgroundImage="394EFA60-50A8-4BEB-B243-20BB0A05022E"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <size key="titleShadowOffset" width="0.5" height="0.5"/>
+                                                <state key="normal" title="Person 5" backgroundImage="15F7BA9C-2835-4C2D-B97D-661FF8E7D986">
+                                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vcn-hA-MTq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljo-Aa-9vE" customClass="FaceButton" customModule="NameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="358" width="164" height="164"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.21101668074324326" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ljo-Aa-9vE" secondAttribute="height" multiplier="1:1" id="Ndx-b5-Keu"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 6" backgroundImage="394EFA60-50A8-4BEB-B243-20BB0A05022E"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <size key="titleShadowOffset" width="0.5" height="0.5"/>
+                                                <state key="normal" title="Person 6" backgroundImage="15F7BA9C-2835-4C2D-B97D-661FF8E7D986">
+                                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tzX-ZE-DFh"/>
                                                 </connections>
@@ -181,7 +206,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="394EFA60-50A8-4BEB-B243-20BB0A05022E" width="170" height="170">
+        <image name="15F7BA9C-2835-4C2D-B97D-661FF8E7D986" width="170" height="170">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

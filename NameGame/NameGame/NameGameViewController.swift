@@ -63,7 +63,6 @@ class NameGameViewController: UIViewController {
         
         for (index, profileIndex) in nameGame.inPlayGameItems.enumerated() {
             
-            print("\(index) \(profileIndex)")
             nameGame.getImage(at: profileIndex) { (image) in
 
                 DispatchQueue.main.async {
@@ -115,7 +114,7 @@ class NameGameViewController: UIViewController {
         if nameGame.choiceResult(choiceIndex: button.id) {
             print("YES")
             button.transitionToTrue()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
                 self.revealAllNames()
             }
         } else {

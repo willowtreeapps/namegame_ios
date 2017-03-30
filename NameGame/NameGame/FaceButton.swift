@@ -27,13 +27,8 @@ open class FaceButton: UIButton {
     func setup() {
         setTitleColor(.white, for: .normal)
         titleLabel?.alpha = 0.0
-
-        titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
-        titleLabel?.numberOfLines = 2
-//        titleLabel?.shadowColor = UIColor.black
-//        titleLabel?.shadowOffset = CGSize(width: -1.0, height: -1.0)
         titleLabel?.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-        
+        titleLabel?.numberOfLines = 2
         tintView.alpha = 0.0
         tintView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tintView)
