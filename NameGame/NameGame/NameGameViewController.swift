@@ -148,7 +148,6 @@ class NameGameViewController: UIViewController {
             self.nameGame.gameFilter = .all
             self.playGame()
         })
-        
         alert.addAction(UIAlertAction(title: "Current Employees", style: .default) { action in
             self.nameGame.gameFilter = .current
             self.playGame()
@@ -157,7 +156,6 @@ class NameGameViewController: UIViewController {
             self.nameGame.gameFilter = .former
             self.playGame()
         })
-        
         alert.addAction(UIAlertAction(title: "Matthew Employees", style: .default) { action in
             self.nameGame.gameFilter = .custom("Mat")
             self.playGame()
