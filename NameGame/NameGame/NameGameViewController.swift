@@ -114,13 +114,11 @@ class NameGameViewController: UIViewController {
     func revealChoiceResult(_ button: FaceButton) {
 
         if nameGame.choiceResult(choiceIndex: button.id) {
-            print("YES")
             button.transitionToTrue()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
                 self.revealAllNames()
             }
         } else {
-            print("NO")
             button.transitionToFalse()
         }
     }
