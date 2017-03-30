@@ -29,7 +29,6 @@ class NameGameViewController: UIViewController {
         nameGame.delegate = self
         
         prepareGamePlay()
-  
     }
 
     // MARK: GamePlay
@@ -45,11 +44,8 @@ class NameGameViewController: UIViewController {
     
     /// Commence play.
     func playGame() {
-        
-        hideButtons()
-        
+        resetButtons()
         nameGame.newGame()
-        
         playRound()
     }
     
@@ -57,12 +53,11 @@ class NameGameViewController: UIViewController {
     func playRound() {
 
         resetButtons()
+        activity.startAnimating()
 
         nameGame.playRound()
         
         questionLabel.text = "Who is " + nameGame.getSolutionProfileName() + "?"
-        
-        activity.startAnimating()
         
         var countImagesRetrieved = 0
         let count = nameGame.inPlayGameItems.count
@@ -88,20 +83,24 @@ class NameGameViewController: UIViewController {
             }
         }
     }
-    
-    
+
+    /*
+    /// Hides all of the buttons.
     private func hideButtons() {
         for button in imageButtons {
             button.isHidden = true
         }
     }
-    
+ */
+
+    /// UnHide all of the buttons.
     private func revealButtons() {
         for button in imageButtons {
             button.isHidden = false
         }
     }
     
+    /// Hides all of the buttons and resets sate to normal.
     private func resetButtons() {
         for button in imageButtons {
             button.isHidden = true
