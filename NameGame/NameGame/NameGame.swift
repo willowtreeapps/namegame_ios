@@ -6,24 +6,30 @@
 //  Copyright © 2016 WillowTree Apps. All rights reserved.
 //
 
+/**
+ A Game starts with a subset of all data
+ Consists of multiple rounds using that same data
+ */
 import Foundation
 import UIKit
 
 protocol NameGameDelegate: class {
 }
 
-enum FilterGameData {
-    case all
-    case former
-    case current
-    case custom(String)
-}
 
-
+/// Game state and data.
 class NameGame {
+
+    enum FilterGameData {
+        case all
+        case former
+        case current
+        case custom(String)
+    }
 
     weak var delegate: NameGameDelegate?
 
+    /// Number of people per round
     let numberPeople = 6
     
     /// All game data from server.
@@ -35,9 +41,13 @@ class NameGame {
     /// Indexes to current gameData.
     var inPlayGameItems: [Int] = []
     
-    /// Index of solution in gameData
+    /// Index of solution in gameData.
     var inPlaySolutionItem: Int = 0
+    
+    /// Current round.
+    var round = 0
 
+    var gameFilter = FilterGameData.all
 
     // Load JSON data from API
     func loadGameData(completion: @escaping () -> Void) {
@@ -87,7 +97,7 @@ class NameGame {
         if let items = results["items"] as? [[String:Any]] {
             allGameData = items
         }
-        analyzeGameData()
+        //analyzeGameData()
     }
     
     
@@ -97,12 +107,21 @@ class NameGame {
         
         print("Count \(gameData.count)")
         
-        filterGameData(filter: .custom("Mat"))
-        
+        //filterGameData(filter: .custom("Mat"))
         //filterGameData(filter: .all)
-        pickItems()
+        //pickItems()
     }
     
+    /// Play a round
+    func playRound() {
+        
+        round += 1
+        
+        //filterGameData(filter: .custom("Mat"))
+        filterGameData(filter: gameFilter)
+        pickItems()
+        
+    }
     
     /// Filters the actve gameData.
     func filterGameData(filter: FilterGameData) {
