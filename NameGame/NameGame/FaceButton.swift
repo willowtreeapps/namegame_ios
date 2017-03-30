@@ -37,6 +37,50 @@ open class FaceButton: UIButton {
         tintView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         tintView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
+    
+    /// A negative match.
+    func transitionToFalse() {
+        tintView.backgroundColor = UIColor.red.withAlphaComponent(0.2)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tintView.alpha = 1.0
+            self.titleLabel?.alpha = 1.0
+        }) { (fini) in
+        }
+    }
+    
+    /// A positive match.
+    func transitionToTrue() {
+        tintView.backgroundColor = UIColor.green.withAlphaComponent(0.2)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tintView.alpha = 1.0
+            self.titleLabel?.alpha = 1.0
+        }) { (fini) in
+        }
+        
+    }
+    
+    /// No tint
+    func transitionToNone() {
+        tintView.backgroundColor = UIColor.red.withAlphaComponent(0.2)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tintView.alpha = 0.0
+            self.titleLabel?.alpha = 0.0
+            
+        }) { (fini) in
+        }
+    }
 
     // TODO: Show the user's face on the button.
+    
+    func showFace(image: UIImage, profileAt index: Int) {
+        //self.imageView?.contentMode = .scaleAspectFit
+    
+        setBackgroundImage(image, for: .normal)
+    
+        (self.subviews[0] as! UIImageView).contentMode = .scaleAspectFit
+    
+        id = index
+    }
+    
+    
 }

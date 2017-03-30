@@ -16,14 +16,80 @@ class NameGameViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var imageButtons: [FaceButton]!
 
+    /// NameGame object loads and processes the data.
+    private var nameGame = NameGame()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let orientation: UIDeviceOrientation = self.view.frame.size.height > self.view.frame.size.width ? .portrait : .landscapeLeft
         configureSubviews(orientation)
+        
+        nameGame.delegate = self
+        
+        DispatchQueue.global().async {
+            self.nameGame.loadGameData {
+                self.playGame()
+            }
+        }
+
     }
 
+    // MARK: GamePlay
+    
+    /// Commence play.
+    func playGame() {
+        
+        questionLabel.text = "Who is " + nameGame.getSolutionProfileName() + "?"
+        
+        hideButtons()
+        
+        var countImagesRetrieved = 0
+        let count = nameGame.numberPeople
+        
+        for (index, profileIndex) in nameGame.inPlayGameItems.enumerated() {
+            nameGame.getImage(at: profileIndex) { (image) in
+                
+                self.imageButtons[index].showFace(image: image, profileAt: profileIndex)
+
+                countImagesRetrieved += 1
+                //print("\(countImagesRetrieved) \(count)")
+                if countImagesRetrieved < count {
+                    // waiting
+                } else {
+                    self.revealButtons()
+                }
+            }
+        }
+    }
+    
+    
+    private func hideButtons() {
+        for button in imageButtons {
+            button.isHidden = true
+        }
+    }
+    
+    private func revealButtons() {
+        for button in imageButtons {
+            button.isHidden = false
+        }
+    }
+    
+    // MARK: Actions
+
     @IBAction func faceTapped(_ button: FaceButton) {
+        
+        button.setTitle(nameGame.getProfileName(at: button.id), for: .normal)
+        
+        if button.id == nameGame.inPlaySolutionItem {
+            print("YES")
+            button.transitionToTrue()
+            
+        } else {
+            print("NO")
+            button.transitionToFalse()
+        }
     }
 
     func configureSubviews(_ orientation: UIDeviceOrientation) {
