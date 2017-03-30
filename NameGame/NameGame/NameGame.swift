@@ -54,8 +54,9 @@ class NameGame {
 
     // Load JSON data from API
     func loadGameData(completion: @escaping () -> Void) {
-        let tempURL = URL.init(fileURLWithPath: NSTemporaryDirectory())
+        let tempURL = URL(fileURLWithPath: NSTemporaryDirectory())
         let profilesURL = tempURL.appendingPathComponent("profiles")
+        print(tempURL.absoluteString)
         
         var dataFromResponse: Data? = nil
         
