@@ -91,31 +91,54 @@ class NameGame {
     }
     
     
-    
+
+    /// Establishes active game data and picks current play items
     private func analyzeGameData() {
         
         print("Count \(gameData.count)")
         
-        let formerEmployees = gameData.filter { $0["jobTitle"] == nil }
+        filterGameData(filter: .custom("Mat"))
         
-        print("FCount \(formerEmployees.count)")
-        
-        gameData = allGameData
+        //filterGameData(filter: .all)
         pickItems()
     }
     
     
+    /// Filters the actve gameData.
     func filterGameData(filter: FilterGameData) {
+        
         switch filter {
         case .all:
             gameData = allGameData
+
+        case .former:
+            gameData = allGameData.filter { $0["jobTitle"] == nil }
+
+        case .current:
+            gameData = allGameData.filter { $0["jobTitle"] != nil }
+
+        case .custom (let filterString):
+            gameData = allGameData.filter { item in
+                // use current with filter
+                if item["jobTitle"] != nil {
+                    if let firstName = item["firstName"] as? String {
+                        if firstName.hasPrefix(filterString) {
+                            return true
+                        }
+                    }
+                }
+                return false
+            }
 
         default:
             gameData = allGameData
         }
         
+        print("gameData Count \(gameData.count)")
+
     }
     
+    /// Pick gamePlay items.
     func pickItems() {
         
         var alreadySelected = IndexSet()
@@ -152,13 +175,6 @@ class NameGame {
         
         inPlayGameItems = [21, 25, 71, 47, 96, 76]
         inPlaySolutionItem = 96
-        
-        
-        //        print(Int(arc4random_uniform(UInt32(count ))))
-        //        print(Int(arc4random_uniform(UInt32(count ))))
-        //        print(Int(arc4random_uniform(UInt32(count ))))
-        //        print(Int(arc4random_uniform(UInt32(count ))))
-        
     }
     
 
