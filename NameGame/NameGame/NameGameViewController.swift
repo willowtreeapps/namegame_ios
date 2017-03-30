@@ -37,7 +37,9 @@ class NameGameViewController: UIViewController {
     func prepareGamePlay() {
         DispatchQueue.global().async {
             self.nameGame.loadGameData {
-                self.playGame()
+                DispatchQueue.main.async {
+                    self.playGame()
+                }
             }
         }
     }
