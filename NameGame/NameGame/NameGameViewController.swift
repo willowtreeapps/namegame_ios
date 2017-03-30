@@ -64,6 +64,7 @@ class NameGameViewController: UIViewController {
         
         questionLabel.text = "Who is " + nameGame.getSolutionProfileName() + "?"
         
+        // Get the images for every profile wait until all received to reveal
         var countImagesRetrieved = 0
         let count = nameGame.inPlayGameItems.count
         
