@@ -48,7 +48,9 @@ class NameGameViewController: UIViewController {
     func playGame() {
         title = nameGame.gameTitle()
         resetButtons()
-        nameGame.newGame()  // response is in delegate method
+        DispatchQueue.global().async {
+            self.nameGame.newGame()  // response is in delegate method
+        }
     }
     
     /// Play a new round of same game.
@@ -56,7 +58,9 @@ class NameGameViewController: UIViewController {
         playButton.isEnabled = false
         resetButtons()
         activity.startAnimating()
-        nameGame.newRound() // response is in delegate method
+        DispatchQueue.global().async {
+            self.nameGame.newRound() // response is in delegate method
+        }
     }
     
     /// Start the round.
@@ -199,11 +203,15 @@ class NameGameViewController: UIViewController {
 extension NameGameViewController: NameGameDelegate {
     
     func nameGameGameReady(_ controller: NameGame) {
-        playRound()
+        DispatchQueue.main.async {
+            self.playRound()
+        }
     }
     
     func nameGameRoundReady(_ controller: NameGame) {
-        startRound()
+        DispatchQueue.main.async {
+            self.startRound()
+        }
     }
 
 }
