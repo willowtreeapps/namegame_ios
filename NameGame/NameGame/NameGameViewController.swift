@@ -115,8 +115,7 @@ class NameGameViewController: UIViewController {
         if nameGame.choiceResult(choiceIndex: button.id) {
             print("YES")
             button.transitionToTrue()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                // your code here
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
                 self.revealAllNames()
             }
         } else {
