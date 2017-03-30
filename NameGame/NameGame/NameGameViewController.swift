@@ -10,6 +10,7 @@ import UIKit
 
 class NameGameViewController: UIViewController {
 
+    @IBOutlet weak var playButton: UIBarButtonItem!
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var outerStackView: UIStackView!
     @IBOutlet weak var innerStackView1: UIStackView!
@@ -62,6 +63,7 @@ class NameGameViewController: UIViewController {
         
         for (index, profileIndex) in nameGame.inPlayGameItems.enumerated() {
             
+            print("\(index) \(profileIndex)")
             nameGame.getImage(at: profileIndex) { (image) in
 
                 DispatchQueue.main.async {
@@ -75,6 +77,7 @@ class NameGameViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.revealButtons()
                         self.activity.stopAnimating()
+                        self.playButton.isEnabled = true
                     }
                 }
             }
@@ -147,6 +150,7 @@ class NameGameViewController: UIViewController {
     }
     
     @IBAction func playButtonTapped(_ sender: UIBarButtonItem) {
+        sender.isEnabled = false
         self.playRound()
     }
     

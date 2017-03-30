@@ -161,8 +161,12 @@ class NameGame {
             if alreadySelected.contains(r) {
                 continue
             }
-            alreadySelected.insert(r)
-            selectedItems.append(r)
+            
+            // check for valid only records with image
+            if let _ = getImageURL(at: r) {
+                alreadySelected.insert(r)
+                selectedItems.append(r)
+            }
         }
         
         print("\(selectedItems)")
@@ -250,6 +254,9 @@ class NameGame {
 
                 }
             }
+        } else {
+            print("no url")
+            
         }
     }
 

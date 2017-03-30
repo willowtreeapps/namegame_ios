@@ -40,7 +40,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FGv-0C-ewu" secondAttribute="height" multiplier="1:1" id="aBx-Yy-25R"/>
                                                 </constraints>
-                                                <state key="normal" title="Person 1" backgroundImage="19E8CE01-6E24-4EFE-BE2A-4E416D236910"/>
+                                                <state key="normal" title="Person 1" backgroundImage="394EFA60-50A8-4BEB-B243-20BB0A05022E"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0X-ga-X94"/>
                                                 </connections>
@@ -51,7 +51,7 @@
                                                     <constraint firstAttribute="width" secondItem="qlO-si-bP2" secondAttribute="height" multiplier="1:1" id="aiT-Qv-AU6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 2" backgroundImage="19E8CE01-6E24-4EFE-BE2A-4E416D236910"/>
+                                                <state key="normal" title="Person 2" backgroundImage="394EFA60-50A8-4BEB-B243-20BB0A05022E"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCs-fq-4gM"/>
                                                 </connections>
@@ -62,7 +62,7 @@
                                                     <constraint firstAttribute="width" secondItem="m9V-c5-o1r" secondAttribute="height" multiplier="1:1" id="ZgB-UY-UAw"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 3" backgroundImage="19E8CE01-6E24-4EFE-BE2A-4E416D236910"/>
+                                                <state key="normal" title="Person 3" backgroundImage="394EFA60-50A8-4BEB-B243-20BB0A05022E"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rxn-jl-MoD"/>
                                                 </connections>
@@ -79,7 +79,7 @@
                                                     <constraint firstAttribute="width" secondItem="wKD-LA-aOV" secondAttribute="height" multiplier="1:1" id="jTy-xr-yVR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 4" backgroundImage="19E8CE01-6E24-4EFE-BE2A-4E416D236910"/>
+                                                <state key="normal" title="Person 4" backgroundImage="394EFA60-50A8-4BEB-B243-20BB0A05022E"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qJ2-f6-JBo"/>
                                                 </connections>
@@ -90,7 +90,7 @@
                                                     <constraint firstAttribute="width" secondItem="sT1-JL-4jJ" secondAttribute="height" multiplier="1:1" id="a4I-eK-8ky"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 5" backgroundImage="19E8CE01-6E24-4EFE-BE2A-4E416D236910"/>
+                                                <state key="normal" title="Person 5" backgroundImage="394EFA60-50A8-4BEB-B243-20BB0A05022E"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vcn-hA-MTq"/>
                                                 </connections>
@@ -101,7 +101,7 @@
                                                     <constraint firstAttribute="width" secondItem="ljo-Aa-9vE" secondAttribute="height" multiplier="1:1" id="Ndx-b5-Keu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Person 6" backgroundImage="19E8CE01-6E24-4EFE-BE2A-4E416D236910"/>
+                                                <state key="normal" title="Person 6" backgroundImage="394EFA60-50A8-4BEB-B243-20BB0A05022E"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tzX-ZE-DFh"/>
                                                 </connections>
@@ -147,6 +147,7 @@
                         <outlet property="innerStackView1" destination="EA9-A5-9wD" id="yjt-2t-CcL"/>
                         <outlet property="innerStackView2" destination="9jZ-07-xma" id="qPn-q5-7bh"/>
                         <outlet property="outerStackView" destination="vIP-zJ-c7A" id="9jW-Zm-qp5"/>
+                        <outlet property="playButton" destination="XRN-9B-yph" id="5T0-xM-NBI"/>
                         <outlet property="questionLabel" destination="YNy-dp-Uoo" id="WOZ-Nd-EOU"/>
                         <outletCollection property="imageButtons" destination="ljo-Aa-9vE" collectionClass="NSMutableArray" id="anO-Df-52G"/>
                         <outletCollection property="imageButtons" destination="wKD-LA-aOV" collectionClass="NSMutableArray" id="T3m-xx-NPh"/>
@@ -180,7 +181,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="19E8CE01-6E24-4EFE-BE2A-4E416D236910" width="170" height="170">
+        <image name="394EFA60-50A8-4BEB-B243-20BB0A05022E" width="170" height="170">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
