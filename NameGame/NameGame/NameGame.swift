@@ -35,17 +35,17 @@ class NameGame {
     let numberPeople = 6
     
     /// All game data from server.
-    var allGameData: [[String:Any]] = []
+    private var allGameData: [[String:Any]] = []
     
     /// Referenceable game data.
-    var gameData: [[String:Any]] = []
-    
-    /// Indexes to current gameData.
-    var inPlayGameItems: [Int] = []
+    private var gameData: [[String:Any]] = []
     
     /// Index of solution in gameData.
-    var inPlaySolutionItem: Int = 0
-    
+    private var inPlaySolutionItem: Int = 0
+
+    /// Indexes to current gameData.
+    var inPlayGameItems: [Int] = []
+
     /// Current round.
     var round = 0
 
