@@ -14,6 +14,8 @@ import Foundation
 import UIKit
 
 protocol NameGameDelegate: class {
+    func nameGameGameReady(_ controller: NameGame)
+    func nameGameRoundReady(_ controller: NameGame)
 }
 
 
@@ -104,6 +106,7 @@ class NameGame {
     func newGame() {
         filterGameData(filter: gameFilter)
         round = 0
+        delegate?.nameGameGameReady(self)
     }
     
     /// Filters the actve gameData.
@@ -151,10 +154,11 @@ class NameGame {
         }
     }
     
-    /// Play a round
-    func playRound() {
+    /// Setup new round of current game
+    func newRound() {
         round += 1
         pickItems()
+        delegate?.nameGameRoundReady(self)
     }
     
     /// Pick gamePlay items.

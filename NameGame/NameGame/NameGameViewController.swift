@@ -48,16 +48,19 @@ class NameGameViewController: UIViewController {
     func playGame() {
         title = nameGame.gameTitle()
         resetButtons()
-        nameGame.newGame()
-        playButton.isEnabled = false
-        playRound()
+        nameGame.newGame()  // response is in delegate method
     }
     
     /// Play a new round of same game.
     func playRound() {
+        playButton.isEnabled = false
         resetButtons()
         activity.startAnimating()
-        nameGame.playRound()
+        nameGame.newRound() // response is in delegate method
+    }
+    
+    /// Start the round.
+    func startRound() {
         
         questionLabel.text = "Who is " + nameGame.getSolutionProfileName() + "?"
         
@@ -166,6 +169,7 @@ class NameGameViewController: UIViewController {
         self.playRound()
     }
     
+    
     // MARK: Layout
     
     func configureSubviews(_ orientation: UIDeviceOrientation) {
@@ -188,5 +192,17 @@ class NameGameViewController: UIViewController {
     }
 }
 
+
+// MARK: NameGameDelegate
+
 extension NameGameViewController: NameGameDelegate {
+    
+    func nameGameGameReady(_ controller: NameGame) {
+        playRound()
+    }
+    
+    func nameGameRoundReady(_ controller: NameGame) {
+        startRound()
+    }
+
 }
