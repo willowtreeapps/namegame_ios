@@ -62,18 +62,8 @@ open class FaceButton: UIButton {
     /// No tint
     func transitionToNone() {
         tintView.backgroundColor = UIColor.white.withAlphaComponent(0.2)
-        
         self.tintView.alpha = 0.0
         self.titleLabel?.alpha = 0.0
-
-    /*
-        UIView.animate(withDuration: 0.5, animations: {
-            self.tintView.alpha = 0.0
-            self.titleLabel?.alpha = 0.0
-            
-        }) { (fini) in
-        }
- */
     }
 
     
