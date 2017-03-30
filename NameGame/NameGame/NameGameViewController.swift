@@ -129,6 +129,7 @@ class NameGameViewController: UIViewController {
     /// Reveal the result of the choice for button.
     func revealAllNames() {
         for button in imageButtons {
+            button.setTitle(nameGame.getProfileName(at: button.id), for: .normal)
             button.revealName()
         }
     }
