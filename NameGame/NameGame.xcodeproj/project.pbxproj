@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		03909FE01DDE4ACE00C701A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03909FDF1DDE4ACE00C701A0 /* LaunchScreen.storyboard */; };
 		03CE45611DD1302700ABF7FA /* NameGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CE45601DD1302700ABF7FA /* NameGame.swift */; };
+		B31B59601EEF2044000F26F8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31B595F1EEF2044000F26F8 /* APIService.swift */; };
+		B31B59641EEF211C000F26F8 /* UserRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31B59631EEF211C000F26F8 /* UserRecord.swift */; };
+		B31B59661EEF271F000F26F8 /* JSONKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31B59651EEF271F000F26F8 /* JSONKey.swift */; };
 		EC6A1AB71C8F6E5A0071F529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A1AB61C8F6E5A0071F529 /* AppDelegate.swift */; };
 		EC6A1AB91C8F6E5A0071F529 /* NameGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A1AB81C8F6E5A0071F529 /* NameGameViewController.swift */; };
 		EC6A1ABC1C8F6E5A0071F529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6A1ABA1C8F6E5A0071F529 /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		03909FDF1DDE4ACE00C701A0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03CE45601DD1302700ABF7FA /* NameGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameGame.swift; sourceTree = "<group>"; };
+		B31B595F1EEF2044000F26F8 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B31B59631EEF211C000F26F8 /* UserRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRecord.swift; sourceTree = "<group>"; };
+		B31B59651EEF271F000F26F8 /* JSONKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONKey.swift; sourceTree = "<group>"; };
 		EC6A1AB31C8F6E5A0071F529 /* NameGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6A1AB61C8F6E5A0071F529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC6A1AB81C8F6E5A0071F529 /* NameGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameGameViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,23 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		B31B59611EEF20F3000F26F8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B31B595F1EEF2044000F26F8 /* APIService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		B31B59621EEF20FC000F26F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B31B59631EEF211C000F26F8 /* UserRecord.swift */,
+				B31B59651EEF271F000F26F8 /* JSONKey.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		EC6A1AAA1C8F6E5A0071F529 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +89,8 @@
 		EC6A1AB51C8F6E5A0071F529 /* NameGame */ = {
 			isa = PBXGroup;
 			children = (
+				B31B59621EEF20FC000F26F8 /* Model */,
+				B31B59611EEF20F3000F26F8 /* Services */,
 				EC6A1AB61C8F6E5A0071F529 /* AppDelegate.swift */,
 				EC6A1AB81C8F6E5A0071F529 /* NameGameViewController.swift */,
 				03CE45601DD1302700ABF7FA /* NameGame.swift */,
@@ -151,6 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC6A1AB91C8F6E5A0071F529 /* NameGameViewController.swift in Sources */,
+				B31B59661EEF271F000F26F8 /* JSONKey.swift in Sources */,
+				B31B59641EEF211C000F26F8 /* UserRecord.swift in Sources */,
+				B31B59601EEF2044000F26F8 /* APIService.swift in Sources */,
 				EC6A1AB71C8F6E5A0071F529 /* AppDelegate.swift in Sources */,
 				03CE45611DD1302700ABF7FA /* NameGame.swift in Sources */,
 				ECF50AB51C9331CA00C41A1D /* FaceButton.swift in Sources */,
