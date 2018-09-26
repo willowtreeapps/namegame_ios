@@ -15,12 +15,20 @@ class NameGameViewController: UIViewController {
     @IBOutlet weak var innerStackView2: UIStackView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var imageButtons: [FaceButton]!
+    
+    var game: NameGame = NameGame();
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = Constants.willowTreeColor
         let orientation: UIDeviceOrientation = self.view.frame.size.height > self.view.frame.size.width ? .portrait : .landscapeLeft
         configureSubviews(orientation)
+        
+        // Use NameGame to fetch profiles
+        game.loadGameData {
+            //populateGameField()
+        }
     }
 
     @IBAction func faceTapped(_ button: FaceButton) {
@@ -47,4 +55,7 @@ class NameGameViewController: UIViewController {
 }
 
 extension NameGameViewController: NameGameDelegate {
+    func complete() {
+        print("Delegate method worked!")
+    }
 }
