@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		03909FE01DDE4ACE00C701A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03909FDF1DDE4ACE00C701A0 /* LaunchScreen.storyboard */; };
 		03CE45611DD1302700ABF7FA /* NameGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CE45601DD1302700ABF7FA /* NameGame.swift */; };
+		347CA2D6215B032D007985AA /* Coworkers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347CA2D5215B032D007985AA /* Coworkers.swift */; };
+		347CA2D8215B0569007985AA /* Headshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347CA2D7215B0569007985AA /* Headshot.swift */; };
+		347CA2DD215B12C3007985AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347CA2DC215B12C3007985AA /* Constants.swift */; };
+		347CA2E0215BFCDE007985AA /* ProfileImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347CA2DF215BFCDE007985AA /* ProfileImageService.swift */; };
 		EC6A1AB71C8F6E5A0071F529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A1AB61C8F6E5A0071F529 /* AppDelegate.swift */; };
 		EC6A1AB91C8F6E5A0071F529 /* NameGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A1AB81C8F6E5A0071F529 /* NameGameViewController.swift */; };
 		EC6A1ABC1C8F6E5A0071F529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6A1ABA1C8F6E5A0071F529 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		03909FDF1DDE4ACE00C701A0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03CE45601DD1302700ABF7FA /* NameGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameGame.swift; sourceTree = "<group>"; };
+		347CA2D5215B032D007985AA /* Coworkers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coworkers.swift; sourceTree = "<group>"; };
+		347CA2D7215B0569007985AA /* Headshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headshot.swift; sourceTree = "<group>"; };
+		347CA2DC215B12C3007985AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		347CA2DF215BFCDE007985AA /* ProfileImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageService.swift; sourceTree = "<group>"; };
 		EC6A1AB31C8F6E5A0071F529 /* NameGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6A1AB61C8F6E5A0071F529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC6A1AB81C8F6E5A0071F529 /* NameGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameGameViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +55,31 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		347CA2D4215B02F5007985AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				347CA2D5215B032D007985AA /* Coworkers.swift */,
+				347CA2D7215B0569007985AA /* Headshot.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		347CA2DB215B12B1007985AA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				347CA2DC215B12C3007985AA /* Constants.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		347CA2DE215BFCA2007985AA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				347CA2DF215BFCDE007985AA /* ProfileImageService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		EC6A1AAA1C8F6E5A0071F529 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +99,9 @@
 		EC6A1AB51C8F6E5A0071F529 /* NameGame */ = {
 			isa = PBXGroup;
 			children = (
+				347CA2DE215BFCA2007985AA /* Services */,
+				347CA2DB215B12B1007985AA /* Common */,
+				347CA2D4215B02F5007985AA /* Models */,
 				EC6A1AB61C8F6E5A0071F529 /* AppDelegate.swift */,
 				EC6A1AB81C8F6E5A0071F529 /* NameGameViewController.swift */,
 				03CE45601DD1302700ABF7FA /* NameGame.swift */,
@@ -110,6 +146,7 @@
 				TargetAttributes = {
 					EC6A1AB21C8F6E5A0071F529 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = SAZD26LMS4;
 						LastSwiftMigration = 0810;
 					};
 				};
@@ -151,9 +188,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC6A1AB91C8F6E5A0071F529 /* NameGameViewController.swift in Sources */,
+				347CA2E0215BFCDE007985AA /* ProfileImageService.swift in Sources */,
 				EC6A1AB71C8F6E5A0071F529 /* AppDelegate.swift in Sources */,
 				03CE45611DD1302700ABF7FA /* NameGame.swift in Sources */,
 				ECF50AB51C9331CA00C41A1D /* FaceButton.swift in Sources */,
+				347CA2D6215B032D007985AA /* Coworkers.swift in Sources */,
+				347CA2D8215B0569007985AA /* Headshot.swift in Sources */,
+				347CA2DD215B12C3007985AA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +304,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SAZD26LMS4;
 				INFOPLIST_FILE = NameGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willowtreeapps.NameGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joesromero.NameGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -275,9 +317,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SAZD26LMS4;
 				INFOPLIST_FILE = NameGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willowtreeapps.NameGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joesromero.NameGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
