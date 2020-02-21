@@ -5,9 +5,9 @@ Leading scientists have proven, via science, that learning your coworkers names 
 
 ## Your mission
 
-1. Use this JSON API: https://willowtreeapps.com/api/v1.0/profiles/, which returns a list of employees along with their headshots, as a datasource for the game. A swagger spec for this API can be found [here] to use as a reference.
+1. Use this [JSON API](https://willowtreeapps.com/api/v1.0/profiles/), which returns a list of employees along with their headshots, as a datasource for the game. A swagger spec for this API will be created soon to use as a reference.
 
-2. Use these designs as a reference for your implementation of the game: https://www.figma.com/file/yUzRfmltt1m1UT9UkKL3y6/namegame?node-id=0%3A1. Try to match these designs as closely as possible. All assets are either default SFSymbols or can be exported from Figma directly.
+2. Use [these Figma designs](https://www.figma.com/file/yUzRfmltt1m1UT9UkKL3y6/namegame?node-id=0%3A1) as a reference for your implementation of the game. Try to match these designs as closely as possible. All assets are either default SFSymbols or can be exported from Figma directly.
 
 3. Include an app icon, splash screen, main menu and game screen as shown in the designs. Don't forget to support iPad as well as iPhone, in both landscape and portrait mode.
 
