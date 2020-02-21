@@ -19,4 +19,4 @@ Leading scientists have proven, via science, that learning your coworkers names 
 
 7. In timed mode the user will be able to make incorrect guesses until they find the correct user, in which case a new set of random employees will be displayed. This mode ends when a timer runs out, feel free to make the timer as long or short as you would like. Once the timer runs out, their score is displayed and clicking "OK" navigates them back to the Menu.
 
-8. You can implement this app however you choose, that said, your Name Game test project will be evaluated according to [this] rubric. 
+8. You can implement this app however you choose, that said, your Name Game test project will be evaluated according to [this rubric](namegame_evaluation_rubric.pdf). 
