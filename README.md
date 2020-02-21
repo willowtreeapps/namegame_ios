@@ -11,7 +11,7 @@ Leading scientists have proven, via science, that learning your coworkers names 
 
 3. Include an app icon, splash screen, main menu and game screen as shown in the designs. Don't forget to support iPad as well as iPhone, in both landscape and portrait mode.
 
-[iPad Main Menu]: assets/screenshots/ipad_home.png
+![iPad Main Menu](assets/screenshots/ipad_home.png)
 
 4. Clicking “Practice Mode” or "Timed Mode" on the menu screen will navigate to the game screen. On the game screen, the game will select 6 employees at random from the list of employees and display their headshots in random order. Out of the 6, the name of one of those random employees will appear on the screen.
 
